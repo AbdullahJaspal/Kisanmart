@@ -28,6 +28,7 @@ end
 target 'KisanMart' do
   config = use_native_modules!
 
+  versions['Flipper'] ||= '0.37.0'
   # Flags change depending on the env values.
   flags = get_default_flags()
 

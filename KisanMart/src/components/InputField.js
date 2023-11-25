@@ -14,6 +14,8 @@ const InputField = ({
   hidePass,
   multiline,
   height = 50,
+  onEndEditing,
+  onChangeText,
 }) => {
   const {t, i18n} = useTranslation();
 
@@ -36,7 +38,9 @@ const InputField = ({
         multiline={multiline}
         secureTextEntry={secureTextEntry}
         placeholder={placeholder}
+        onEndEditing={onEndEditing}
         keyboardType={keyboardType}
+        onChangeText={onChangeText}
         placeholderTextColor={Colors.complimantory}
         style={{
           width: eye ? '85%' : '95%',

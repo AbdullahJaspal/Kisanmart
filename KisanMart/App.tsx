@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {}, []);
   return (
     <SafeAreaView style={{flex: 1}}>
-      <MainNav />
+      <Sample />
     </SafeAreaView>
   );
 };
