@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import Onboarding from './src/screens/onBoardingScreens/onBoarding';
 import i18next from 'i18next';
 import {useTranslation} from 'react-i18next';
 import ChooseLanguage from './src/screens/auth/language/language';
