@@ -25,9 +25,7 @@ const Signup = ({navigation}) => {
     return (
       <TouchableOpacity style={styles.socialIcon}>
         <Image style={styles.icon} source={image} />
-        <Text style={{...CustomStyles.paragraph, color: 'black', marginTop: 5}}>
-          {title}
-        </Text>
+        <Text style={styles.iconWrap}>{title}</Text>
       </TouchableOpacity>
     );
   };
@@ -79,7 +77,7 @@ const Signup = ({navigation}) => {
           title={t('signup')}
           titleColor={'white'}
           onPress={() => {
-            navigation.navigate('Login');
+            navigation.navigate('CreateProfile');
           }}
         />
 
@@ -145,6 +143,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   icon: {width: '30%', height: '30%', resizeMode: 'contain'},
+  iconWrap: {...CustomStyles.paragraph, color: 'black', marginTop: 5},
 });
 
 export default Signup;

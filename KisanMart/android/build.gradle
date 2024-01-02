@@ -20,10 +20,14 @@ buildscript {
     
         maven { url "http://maven.microblink.com" 
          allowInsecureProtocol = true}
+        maven { url "https://jitpack.io" } 
+        maven { url "https://maven.google.com" } 
 
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath 'com.google.android.gms:strict-version-matcher-plugin:1.2.1'
+        
     }
 }

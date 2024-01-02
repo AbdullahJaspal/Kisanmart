@@ -23,9 +23,7 @@ const Login = ({navigation}) => {
     return (
       <TouchableOpacity style={styles.socialIcon}>
         <Image style={styles.icon} source={image} />
-        <Text style={{...CustomStyles.paragraph, color: 'black', marginTop: 5}}>
-          {title}
-        </Text>
+        <Text style={styles.iconText}>{title}</Text>
       </TouchableOpacity>
     );
   };
@@ -56,14 +54,7 @@ const Login = ({navigation}) => {
           }}
         />
         <Text
-          style={{
-            ...CustomStyles.paragraph,
-            alignSelf: 'flex-end',
-            marginVertical: 10,
-            marginRight: i18n.language === 'en' ? 25 : 0,
-            marginLeft: i18n.language === 'urd' ? 25 : 0,
-            alignSelf: i18n.language === 'en' ? 'flex-end' : 'flex-start',
-          }}
+          style={styles.forgetText(i18n.language)}
           onPress={() => {
             navigation.navigate('ForgetPassword');
           }}>
@@ -143,6 +134,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   icon: {width: '30%', height: '30%', resizeMode: 'contain'},
+  iconText: {...CustomStyles.paragraph, color: 'black', marginTop: 5},
+  forgetText: language => {
+    return {
+      ...CustomStyles.paragraph,
+      alignSelf: 'flex-end',
+      marginVertical: 10,
+      marginRight: language === 'en' ? 25 : 0,
+      marginLeft: language === 'urd' ? 25 : 0,
+      alignSelf: language === 'en' ? 'flex-end' : 'flex-start',
+    };
+  },
 });
 
 export default Login;

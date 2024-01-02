@@ -5,14 +5,13 @@ import ChooseLanguage from './src/screens/auth/language/language';
 import Login from './src/screens/auth/login/login';
 import MainNav from './src/navigation/mainNav';
 import {SafeAreaView} from 'react-native';
-import CreateRequest from './src/screens/createRequest';
 import DealDetail from './src/screens/buyerSide/dealDetails/dealDetails';
-import Sample from './src/blink';
+import SellerInfo from './src/screens/buyerSide/sellerInfo/sellerInfo';
 const App = () => {
   useEffect(() => {}, []);
   return (
     <SafeAreaView style={{flex: 1}}>
-      <Sample />
+      <MainNav />
     </SafeAreaView>
   );
 };

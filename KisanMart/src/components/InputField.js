@@ -16,6 +16,7 @@ const InputField = ({
   height = 50,
   onEndEditing,
   onChangeText,
+  width = '90%',
 }) => {
   const {t, i18n} = useTranslation();
 
@@ -25,7 +26,7 @@ const InputField = ({
         flexDirection: i18n.language === 'en' ? 'row' : 'row-reverse',
         borderWidth: 0.5,
         height: height,
-        width: '90%',
+        width: width,
         alignSelf: 'center',
         borderColor: Colors.complimantory,
         borderRadius: 100,
@@ -48,6 +49,7 @@ const InputField = ({
           textAlign: i18n.language === 'en' ? 'left' : 'right',
           textAlignVertical: 'top',
           height: '100%',
+          color: 'black',
         }}
       />
       {eye && (

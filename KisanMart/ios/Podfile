@@ -28,7 +28,6 @@ end
 target 'KisanMart' do
   config = use_native_modules!
 
-  versions['Flipper'] ||= '0.37.0'
   # Flags change depending on the env values.
   flags = get_default_flags()
 
@@ -49,6 +48,11 @@ target 'KisanMart' do
   target 'KisanMartTests' do
     inherit! :complete
     # Pods for testing
+    pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+  'TextDetector',
+  'FaceDetectorMLKit',
+  'BarcodeDetectorMLKit'
+]
   end
 
   post_install do |installer|
